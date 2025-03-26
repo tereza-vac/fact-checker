@@ -1,6 +1,9 @@
 
 streamlit
 openai
-scikit-learn
+sentence-transformers
 wikipedia
 requests
+beautifulsoup4
+scikit-learn
+torch
