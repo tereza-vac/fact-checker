@@ -20,7 +20,7 @@ tvrzeni = st.text_input("Zadejte tvrzení, které chcete ověřit:")
 # Vyber metody
 metoda = st.radio(
     "Vyberte metodu ověření:",
-    ["Klasický retrieval", "LLM - OpenAI GPT", "LLM - LLaMA (Groq)", "LLM + Web (RUG)"]
+    ["Klasický retrieval", "LLM - OpenAI GPT", "LLM - LLaMA (Groq)", "LLM + Web (RAG)"]
 )
 
 if st.button("Ověřit fakt") and tvrzeni:
@@ -44,7 +44,7 @@ if st.button("Ověřit fakt") and tvrzeni:
 
         st.caption(f"Latence: {latency:.2f} sekundy")
 
-    elif metoda == "LLM + Web (RUG)":
+    elif metoda == "LLM + Web (RAG)":
         model = "openai" if st.radio("Model:", ["OpenAI GPT", "LLaMA (Groq)"]) == "OpenAI GPT" else "groq"
         with st.spinner("Získávám aktuální informace z webu..."):
             start = time.time()
