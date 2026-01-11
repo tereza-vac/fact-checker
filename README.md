@@ -46,7 +46,7 @@ GROQ_API_KEY = "gsk_..."
 ├── app.py                        # Main UI of the app
 ├── retrieval.py                 # Wikipedia retrieval logic
 ├── llm_checker.py               # GPT / LLaMA evaluation without context
-├── duckduck_retrieval.py       # DuckDuckGo scraping (RUG)
+├── duckduck_retrieval.py       # DuckDuckGo scraping (RAG)
 ├── check_fact_rug.py           # LLM evaluation with web context
 ├── utils.py                     # Latency, relevance scoring, helpers
 ├── requirements.txt             # List of dependencies
@@ -66,7 +66,7 @@ GROQ_API_KEY = "gsk_..."
 - Evaluates the statement based solely on internal model knowledge
 - Returns: verdict + brief explanation
 
-### 3. LLM + Web (RUG)
+### 3. LLM + Web (RAG)
 - Uses DuckDuckGo to gather current web information
 - LLM makes a decision based on these snippets
 
